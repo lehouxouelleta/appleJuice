@@ -11,6 +11,14 @@
 	height: 42px;
 	margin: 0.2em 2em 0em 0em;
 }
+#upload
+{
+	background-color:#12ba00;
+	color: white;
+	font-weight: bold;
+	margin: 8px 0px 0px 0px;
+	border: none;
+}
 /************************PAGE**************************/
 #page{
 	background-color: #ffffff;
@@ -18,9 +26,10 @@
 body{
 	/*background: url('../img/background.png') repeat;*/
 	padding-top: 70px;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 	min-width: 970px;
 }
+
 /***********************Post**************************/
 .Post
 {
@@ -28,16 +37,27 @@ body{
 }
 .Post:hover
 {
-	background-color: #dddddd;
+	cursor: pointer;
 }
 .PostTitle
 {
 	font-weight: bold;
 	font-size: 2em;
+	margin: 0px 0px 10px 0px;
 }
 .PostText
 {
 
+}
+.pub
+{
+	height: 300px;
+	background-color: #dddddd;
+}
+.borderTop
+{
+	border-top: 1px solid #dddddd;
+	margin: 10px 30px 10px 30px;
 }
 
 /***********************thumbnail grid****************/
@@ -62,8 +82,12 @@ body{
 {
 	padding: 1em 0em 1em 0em;
 }
-
 /***********************Footer************************/
+#navFooter
+{
+	background-color: white;
+	font-size: 0.9em;
+}
 
 /******************MENU*******************************/
 .navbar-collapse
