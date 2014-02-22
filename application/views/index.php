@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="UTF-8">
     <title>UMust See</title>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <!-- Bootstrap -->
@@ -21,11 +22,10 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 			<li><div id="logo"></div></li>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret"></b></a>
+            <li class="menu-hover"><a href="">Accueil</a></li>
+			<li class="menu-hover"><a href="">Combat du jour</a></li>
+            <li class="dropdown menu-hover">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cat&eacute;gories <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -38,9 +38,9 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Log in</a></li>
-            <li><a href="../navbar-static-top/">Sign up</a></li>
-            <li><button type="button" class="btn btn-default" id="upload">Upload</button></li>
+            <li class="menu-hover"><a href="../navbar/">Connexion</a></li>
+            <li class="menu-hover"><a href="../navbar-static-top/">Inscription</a></li>
+            <li><button type="button" class="btn btn-default" id="upload">Ajouter</button></li>
           </ul>
         </div>
 	  </div>
@@ -50,41 +50,18 @@
 		<div class="row">
 		  <div class="col-xs-9 col-xs-pull-3">
 		  		<div class="row">
+					<?php $query = $this->db->query('SELECT * FROM contenu');
+							foreach ($query->result_array() as $row) { ?>
 					<div class="col-xs-12">
 						<div class="slider">
 							<div class="Post">
-								<div class="PostTitle">
-									Lorem ipsum dolor sit amet
-								</div>
-								<img src="<?php echo base_url(); ?>assets/img/test.jpg" />
-								<div class="PostText internal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+								<div class="PostTitle"><?php echo $row['titre']; ?></div>
+								<img src="<?php echo $row['lien']; ?>" />
+								<div class="PostText internal"><?php echo $row['description'];  ?></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12">
-						<div class="slider">
-						<div class="borderTop"></div>
-							<div class="Post">
-								<div class="PostTitle">
-									Lorem ipsum dolor sit amet
-								</div>
-								<img src="<?php echo base_url(); ?>assets/img/test.jpg" />
-								<div class="PostText internal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12">
-						<div class="slider">
-							<div class="borderTop"></div>
-							<div class="Post">
-								<div class="PostTitle">
-									Lorem ipsum dolor sit amet
-								</div>
-								<img src="<?php echo base_url(); ?>assets/img/test.jpg" />
-								<div class="PostText internal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-							</div>
-						</div>
-					</div>
+					<?php } ?>
 				</div>
 		  </div>
 		   <div class="col-xs-3 col-xs-push-9">
@@ -105,14 +82,13 @@
       <div class="container">
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#About">About</a></li>
-            <li><a href="#FAQ">FAQ</a></li>
-            <li><a href="#Privacy">Privacy</a></li>
-			<li><a href="#Contact">Contact</a></li>
+            <li class="menu-hover"><a href="#About">&Agrave; propos</a></li>
+            <li class="menu-hover"><a href="#FAQ">FAQ</a></li>
+            <li class="menu-hover"><a href="#Privacy">Vie priv&eacute;</a></li>
+			<li class="menu-hover"><a href="#Contact">Nous contacter</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li><a href="../navbar/" class="menu-hover">Haut</a></li>
           </ul>
         </div>
 	  </div>

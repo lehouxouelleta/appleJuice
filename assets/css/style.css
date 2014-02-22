@@ -16,7 +16,7 @@
 	background-color:#12ba00;
 	color: white;
 	font-weight: bold;
-	margin: 8px 0px 0px 0px;
+	margin: 12px 0px 0px 0px;
 	border: none;
 }
 /************************PAGE**************************/
@@ -46,7 +46,8 @@ body{
 }
 .PostText
 {
-
+	margin: 10px 0px 10px 0px;
+	font-size: 1.5em;
 }
 .pub
 {
@@ -69,7 +70,7 @@ body{
 }
 .slider img
 {
-	max-width: 100%; 
+	max-width: 700px; 
     height: auto; 
 }
 /***********************Misc**************************/
@@ -92,6 +93,15 @@ body{
 .navbar-collapse
 {
 	padding-left: 0em;
+}
+.menu-hover
+{
+	padding-top:4px;
+}
+.menu-hover:hover
+{
+	padding-top:0px;
+	border-top: 4px solid #12ba00;
 }
 
 
