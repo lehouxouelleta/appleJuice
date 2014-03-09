@@ -64,6 +64,21 @@ body{
 	border-top: 1px solid #dddddd;
 	margin: 10px 30px 10px 30px;
 }
+
+#chargementContenu
+{
+	position: fixed;
+    bottom: 50px;
+	width:100px;
+	margin-left:300px;
+	display:none;
+}
+#finContenuDisponible
+{
+	width:500px;
+	margin-left:100px;
+	display:none;
+}
 /***********************Misc**************************/
 .MarginTopBottom1
 {

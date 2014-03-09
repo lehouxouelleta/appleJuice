@@ -6,7 +6,9 @@ $(window).scroll(function(){
   if ($(window).scrollTop() == $(document).height() - $(window).height() && load==false){
 
     /*calling the function to get the ajax data*/
+	document.getElementById('chargementContenu').style.display = 'block';
     lastPostFunc();
+	document.getElementById('chargementContenu').style.display = 'none';
   }
 });
 
@@ -24,9 +26,14 @@ function lastPostFunc() {
       dataType: "html",
       success: function(data) {
         if (data != "End")
-          $('.rowContenu').append(data);
+		{
+			$('.rowContenu').append(data);
+		}
         else
-          reachedEnd = true;
+		{
+			reachedEnd = true;
+			document.getElementById('finContenuDisponible').style.display = 'block';
+		}
       }
     })
 	load = false;

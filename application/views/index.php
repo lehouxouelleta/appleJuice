@@ -48,8 +48,16 @@
   </header>
 	<div class="container" id="page">
 		<div class="row">
-		  <div class="col-xs-9 col-xs-pull-3">
+		  <div class="col-xs-9 col-xs-pull-3">	
+			<div class="progress progress-striped active" id="chargementContenu">
+			  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+			  </div>
+			</div>
 		  <?php $this->load->view($view_name, $view_data); ?>
+			<div class="alert alert-info alert-dismissable" id="finContenuDisponible">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			  Il n’y a pas d’autres publications à afficher pour le moment.
+			</div>
 
 		  </div>
 		   <div class="col-xs-3 col-xs-push-9">
