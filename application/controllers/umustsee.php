@@ -25,8 +25,24 @@ class Umustsee extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('index');
+			  // loading the required files
+	  $this->load->model('contenu_model', 'contenu');
+	  // view data
+	  $data['view_name'] = 'infscroll_customlisting';
+	  $data['view_data']['contenu'] = $this->contenu->get_contenu();
+	  $this->load->view('index', $data);
 	}
+	public function ajax_contenu_list($offset = null) {
+	  $this->load->model('contenu_model', 'contenu');
+	  if ($this->contenu->get_contenu(3,$offset)) {
+		$data['contenu'] = $this->contenu->get_contenu(3,$offset);
+		$this->load->view('ajax_listing',$data);
+	  }
+	  else {
+		echo 'End';
+	  }
+	}
+	
 }
 
 /* End of file welcome.php */

@@ -34,6 +34,11 @@ body{
 {
 	padding:5px;
 }
+.Post img
+{
+	width: 700px;
+	height: auto;
+}
 .Post:hover
 {
 	cursor: pointer;
@@ -58,20 +63,6 @@ body{
 {
 	border-top: 1px solid #dddddd;
 	margin: 10px 30px 10px 30px;
-}
-
-/***********************thumbnail grid****************/
-.slider {
-    float:left;
-	margin: 10px 0px 10px 0px;
-}
-.internal {
-    display: none;
-}
-.slider img
-{
-	max-width: 700px; 
-    height: auto; 
 }
 /***********************Misc**************************/
 .MarginTopBottom1

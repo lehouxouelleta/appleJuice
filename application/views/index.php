@@ -49,20 +49,8 @@
 	<div class="container" id="page">
 		<div class="row">
 		  <div class="col-xs-9 col-xs-pull-3">
-		  		<div class="row">
-					<?php $query = $this->db->query('SELECT * FROM contenu');
-							foreach ($query->result_array() as $row) { ?>
-					<div class="col-xs-12">
-						<div class="slider">
-							<div class="Post">
-								<div class="PostTitle"><?php echo $row['titre']; ?></div>
-								<img src="<?php echo $row['lien']; ?>" />
-								<div class="PostText internal"><?php echo $row['description'];  ?></div>
-							</div>
-						</div>
-					</div>
-					<?php } ?>
-				</div>
+		  <?php $this->load->view($view_name, $view_data); ?>
+
 		  </div>
 		   <div class="col-xs-3 col-xs-push-9">
 			<div class="pub MarginTopBottom1">
@@ -97,13 +85,10 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url().'assets/js/infscroll.js'; ?>"></script>
 		<script>
-			$(document).ready(function () {
-				$('.slider').click(function () {
-					$(this).find('.internal').slideToggle();
-				});
-			});
+
 		</script>
   </body>
 </html>
