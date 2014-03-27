@@ -41,57 +41,71 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="menu-hover"><a href="../navbar/">Connexion</a></li>
             <li class="menu-hover"><a href="../navbar-static-top/">Inscription</a></li>
-            <li><button type="button" class="btn btn-default" id="upload" onclick="location.href='<?php echo base_url().'ajouter' ?>'">Ajouter</button></li>
+            <li><button type="button" class="btn btn-default" id="upload">Ajouter</button></li>
           </ul>
         </div>
 	  </div>
     </div>
   </header>
 	<div class="container" id="page">
-		<div class="row">
-		  <div class="col-xs-9 col-xs-pull-3">	
-			<div class="progress progress-striped active" id="chargementContenu">
-			  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+		<div class="row MarginTop5">
+		  <div class="col-xs-5 col-xs-pull-7">	
+			<form role="form">
+			  <div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
 			  </div>
-			</div>
-		  <?php $this->load->view($view_name, $view_data); ?>
-			<div class="alert alert-info alert-dismissable" id="finContenuDisponible">
-			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			  Il n’y a pas d’autres publications à afficher pour le moment.
-			</div>
-
+			  <div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <div class="form-group">
+				<label for="exampleInputFile">File input</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">Example block-level help text here.</p>
+			  </div>
+			  <div class="checkbox">
+				<label>
+				  <input type="checkbox"> Check me out
+				</label>
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
 		  </div>
-		   <div class="col-xs-3 col-xs-push-9">
-			<div class="pub MarginTopBottom1">
-				pub
+		  <div class="col-xs-2 col-xs-push-5">
+			<div class="bordureVerticale"></div>
+			<div class="texteSeparation">
+				ou
 			</div>
-			<div class="pub MarginTopBottom1">
-				pub
-			</div>
-			<div class="pub MarginTopBottom1">
-				pub
-			</div>
+			<div class="bordureVerticale"></div>
 		  </div>
+		   <div class="col-xs-5 col-xs-push-7">
+				<form role="form">
+				  <div class="form-group">
+					<label for="exampleInputEmail1">Email address</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputFile">File input</label>
+					<input type="file" id="exampleInputFile">
+					<p class="help-block">Example block-level help text here.</p>
+				  </div>
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox"> Check me out
+					</label>
+				  </div>
+				  <button type="submit" class="btn btn-default">Submit</button>
+				</form>
+		  </div>
+		</div>
 		</div>
 	</div>
 	<div id="footer">
-	<!--
-     <div class="navbar navbar-default navbar-fixed-bottom" id="navFooter" role="navigation">
-      <div class="container">
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="menu-hover"><a href="#About">&Agrave; propos</a></li>
-            <li class="menu-hover"><a href="#FAQ">FAQ</a></li>
-            <li class="menu-hover"><a href="#Privacy">Vie priv&eacute;</a></li>
-			<li class="menu-hover"><a href="#Contact">Nous contacter</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/" class="menu-hover">Haut</a></li>
-          </ul>
-        </div>
-	  </div>
-    </div>
-	-->
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>

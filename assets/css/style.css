@@ -25,7 +25,6 @@
 }
 body{
 	padding-top: 70px;
-	padding-bottom: 50px;
 	min-width: 970px;
 }
 
@@ -38,10 +37,6 @@ body{
 {
 	width: 700px;
 	height: auto;
-}
-.Post:hover
-{
-	cursor: pointer;
 }
 .PostTitle
 {
@@ -68,7 +63,7 @@ body{
 #chargementContenu
 {
 	position: fixed;
-    bottom: 50px;
+    bottom: 20px;
 	width:100px;
 	margin-left:300px;
 	display:none;
@@ -79,6 +74,20 @@ body{
 	margin-left:100px;
 	display:none;
 }
+
+/***********************ajouter***********************/
+.bordureVerticale
+{
+	border-left: 1px solid grey;
+	height: 100px;
+	margin-left: 50%;
+}
+.texteSeparation
+{
+	text-align: center;
+	color: grey;
+}
+
 /***********************Misc**************************/
 .MarginTopBottom1
 {
@@ -88,12 +97,12 @@ body{
 {
 	padding: 1em 0em 1em 0em;
 }
-/***********************Footer************************/
-#navFooter
+.MarginTop5
 {
-	background-color: white;
-	font-size: 0.9em;
+	margin-top: 5em;
 }
+/***********************Footer************************/
+
 
 /******************MENU*******************************/
 .navbar-collapse
@@ -109,8 +118,11 @@ body{
 	padding-top:0px;
 	border-top: 4px solid #12ba00;
 }
-
-
+.dropdown-menu > li
+{
+	line-height: 1.92857143;
+	height: 30px;
+}
 
 /*****************************Disabling responsiveness********************************/
 /* Reset the container */
@@ -197,7 +209,7 @@ body{
 .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
 .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
   color: #fff !important;
-  background-color: #428bca !important;
+  background-color: #12ba00 !important;
 }
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,

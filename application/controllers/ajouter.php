@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Umustsee extends CI_Controller {
+class Ajouter extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -25,35 +25,9 @@ class Umustsee extends CI_Controller {
 	}
 	public function index()
 	{
-			  // loading the required files
-	  $this->load->model('contenu_model', 'contenu');
-	  // view data
-	  $data['view_name'] = 'infscroll_customlisting';
-	  $data['view_data']['contenu'] = $this->contenu->get_contenu();
-	  $data['view_data']['categorie'] = $this->obtenirCategorie();
-	  $this->load->view('index', $data);
-	}
-	public function ajax_contenu_list($offset = null) 
-	{
-	  $this->load->model('contenu_model', 'contenu');
-	  if ($this->contenu->get_contenu(3,$offset)) {
-		$data['contenu'] = $this->contenu->get_contenu(3,$offset);
-		$this->load->view('ajax_listing',$data);
-	  }
-	  else {
-		echo 'End';
-	  }
-	}
-	public function ajouter()
-	{
 		$this->load->view('ajouter');
 	}
 	
-	private function obtenirCategorie()
-	{
-		$this->load->model('categorie_model', 'categorie');
-		return $this->categorie->get_categorie();
-	}
 	
 }
 
